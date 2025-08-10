@@ -84,24 +84,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-
-
-
-
-/* ulElem.addEventListener("click", selectImg);
-
-function selectImg(event) {
-    event.preventDefault();
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-
-  const selectedImg = event.target.dataset.source;
-  //import * as basicLightbox from 'basiclightbox'
-
-const instance = basicLightbox.create(`
-    <img src=${selectedImg} width="800" height="600">
-`)
-
-instance.show()
-} */
