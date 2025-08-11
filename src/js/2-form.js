@@ -7,12 +7,6 @@ const form = document.querySelector(".feedback-form");
 const STORAGE_KEY = 'feedback-form-state';
 
 
-form.addEventListener('input', (e) => {
-formData[e.target.name] = e.target.value;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData)); 
-}
-)
-
 const saved = localStorage.getItem(STORAGE_KEY);
 if (saved) {
   try {
@@ -23,6 +17,13 @@ if (saved) {
     console.error('Error parsing saved form data:', error);
   }
 }
+
+form.addEventListener('input', (e) => {
+formData[e.target.name] = e.target.value;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData)); 
+}
+)
+
 
 form.addEventListener('submit', event => {
   event.preventDefault();
